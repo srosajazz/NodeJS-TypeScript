@@ -1,21 +1,23 @@
 /* eslint-disable import/extensions */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
-import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
+import { FiArrowLeft, FiMail, FiUser, FiLock } from 'react-icons/fi';
 import logoImg from '../../assets/logo.svg';
 import { Container, Content, Background } from './styles';
 
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 
-const SignIn: React.FC = () => (
+const SignUp: React.FC = () => (
   <Container>
+    <Background />
     <Content>
       <img src={logoImg} alt="Barber" />
 
       <form>
-        <h1>Plese logon</h1>
+        <h1>Plese Register</h1>
 
+        <Input name="email" icon={FiUser} placeholder="Name" />
         <Input name="email" icon={FiMail} placeholder="Email" />
 
         <Input
@@ -25,20 +27,18 @@ const SignIn: React.FC = () => (
           placeholder="password"
         />
 
-        <Button name="enter" type="submit">
-          Enter
+        <Button name="register" type="submit">
+          Register
         </Button>
-
-        <a href="forgot">Forgot password</a>
       </form>
 
-      <a href="login">
-        <FiLogIn />
-        Create account
+      <a href="logon">
+        <FiArrowLeft />
+        Back to logon
       </a>
     </Content>
-
-    <Background />
+    {/*
+    <Background /> */}
   </Container>
 );
-export default SignIn;
+export default SignUp;
