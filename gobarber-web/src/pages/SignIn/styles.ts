@@ -42,7 +42,7 @@ export const Content = styled.div`
   }
 
   > a {
-    color: #f4ede8;
+    color:  #ff9000;
       display: block;
       margin-top: 24px;
       text-decoration: none;
@@ -56,7 +56,7 @@ export const Content = styled.div`
     }
 
     &:hover {
-        color: ${shade(0.2, '#f4ede8')};
+        color: ${shade(0.2, '#ff9000')};
       }
 
 
